@@ -1,6 +1,8 @@
 const textarea = document.querySelector("textarea"),
 voiceList = document.querySelector("select"),
 speechBtn = document.querySelector("button");
+clearBtn = document.querySelector(".clear");
+
 
 let synth = speechSynthesis,
 isSpeaking = true;
@@ -55,3 +57,7 @@ speechBtn.addEventListener("click", e =>{
         }
     }
 });
+
+clearBtn.addEventListener("click", () => {
+    textarea.value = "";
+  });
